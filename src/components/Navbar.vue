@@ -38,6 +38,7 @@ export default {
 </script>
 
 <style>
+
 .navbar {
     position: fixed;
     background-color: var(--bg-primary);

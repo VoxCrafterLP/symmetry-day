@@ -1,18 +1,20 @@
 <template>
   <div id="app">
       <navbar></navbar>
+      <chess-game></chess-game>
   </div>
 </template>
 
 
 <script>
-
+import ChessGame from './components/ChessGame.vue'
 import Navbar from './components/Navbar.vue'
 
 export default {
   name: 'App',
   components: {
-      Navbar
+    Navbar,
+    ChessGame
   }
 }
 
