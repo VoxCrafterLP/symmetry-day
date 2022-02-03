@@ -1,20 +1,33 @@
 <template>
   <div id="app">
-      <navbar></navbar>
-      <chess-game></chess-game>
+      <navbar @switchPage="switchPage"></navbar>
+      <chess-game v-show="this.currentPage == 'ChessGame'"></chess-game>
+      <landing-page v-show="this.currentPage == 'Overview'"></landing-page>
   </div>
 </template>
 
 
 <script>
 import ChessGame from './components/ChessGame.vue'
+import LandingPage from './components/LandingPage.vue'
 import Navbar from './components/Navbar.vue'
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    ChessGame
+    ChessGame,
+    LandingPage
+  },
+  data() {
+    return {
+      currentPage: 'Overview'
+    }
+  },
+  methods: {
+    switchPage(page) {
+      this.currentPage = page
+    }
   }
 }
 

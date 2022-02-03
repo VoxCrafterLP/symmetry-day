@@ -3,13 +3,13 @@
         <nav class="navbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a @click="switchPage('Overview')" class="nav-link">
                         <font-awesome-icon icon="home" class="nav-link-icon"></font-awesome-icon>
                         <span class="nav-link-text">Overview</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a @click="switchPage('ChessGame')" class="nav-link">
                         <font-awesome-icon icon="chess" class="nav-link-icon"></font-awesome-icon>
                         <span class="nav-link-text">Chess game</span>
                     </a>
@@ -31,7 +31,9 @@ export default {
     name: "Navbar",
     props: [],
     methods: {
-        
+        switchPage(page) {
+            this.$emit("switchPage", page)
+        }
     }
 }
 
