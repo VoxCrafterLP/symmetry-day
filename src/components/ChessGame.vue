@@ -6,7 +6,7 @@
     <div class="chess-game-explanation">
         <h2 class="chess-game-explanation-title">How does it work?</h2>
         <p class="chess-game-explanation-paragraph">
-            We have two chessboards, one on the right and one on the left. On the right side there are figures that cannot be moved, but those on the left side can be moved. The goal of this game is to move the figures on the left side so that at the end they are symmetrical to the right side. You have to switch between the two colors like in normal chess.    
+            You have two chessboards, one on the right and one on the left. On the right side there are pieces that cannot be moved, but those on the left side can be moved. The goal is to move the pieces on the left side so that at the end they are symmetrical to the ones on the right side. You have to iterate between the two colors like in a normal chess game.    
         </p>
     </div>
 
@@ -22,7 +22,6 @@
 
         <a href="#" class="chess-game-reset chess-game-button">Reset</a>
         <a href="#" class="chess-game-continue chess-game-button">Next level</a>
-
     </div>
 
 </div>
