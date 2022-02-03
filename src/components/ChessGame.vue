@@ -75,9 +75,9 @@ export default {
     data() {
         return {
             levels: [
-                new ChessLevel("1k2rp1r/1b1n1pp1/ppq1p2p/2p5/8/1NBB1N1Q/PPP2PPP/4K2R b - - 0 1", "1k3b2/1b3ppQ/p1q4p/p1p1B3/8/8/PPP2PPP/4r1K1 w - - 0 1", "2b3k1/Qpp3b1/5q1p/3B1p1p/8/8/PPP2PPP/1K1r4 w - - 0 1", "Easy", 15),
-                new ChessLevel("1k1r4/1p4q1/p6r/2ppN3/P3bP2/1P2P2P/KQP5/3R4 b - - 0 1", "1k6/1p1r4/p6r/2pR4/P3bP2/1P2P2P/1KP5/8 b - - 0 1", "6k1/4r1p1/r6p/4Rp2/2Pb3P/P2P2P1/5PK1/8 b - - 0 1", "Medium", 6),
-                new ChessLevel("8/4K2p/8/2PPpP2/Pp1p2P1/2p5/p5P1/1k6 b - - 0 1", "7q/3K4/8/3PpP2/Pp1P2P1/8/pk6/8 w - - 0 1", "q7/4K3/8/2PpP3/1P2P1pP/8/6kp/8 w - - 0 1", "Hard", 69)
+                new ChessLevel("1k2rb1r/1b1n1pp1/ppq4p/2p5/8/1NBB1N1Q/PPP2PPP/3K3R w - - 0 1", "k4b2/1b1n1ppQ/p1q4p/p7/3p4/2B5/PPP2PPP/3KR3 b - - 0 1", "2b4k/Qpp1n1b1/p4q1p/7p/4p3/5B2/PPP2PPP/3RK3 b - - 0 1", "Easy", 15),
+                new ChessLevel("1k1r4/1p4q1/p6r/2ppN3/P3bP2/1P2P2P/KQP5/3R4 w - - 0 1", "1k6/1p1r4/p6r/2pR4/P3bP2/1P2P2P/1KP5/8 b - - 0 1", "6k1/4r1p1/r6p/4Rp2/2Pb3P/P2P2P1/5PK1/8 b - - 0 1", "Medium", 6),
+                new ChessLevel("8/4K2p/8/2PPpP2/Pp1p2P1/2p5/p5P1/1k6 w - - 0 1", "7q/3K4/8/3PpP2/Pp1P2P1/8/pk6/8 b - - 0 1", "q7/4K3/8/2PpP3/1P2P1pP/8/6kp/8 w - - 0 1", "Hard", 69)
             ],
             showBoards: true,
             currentLevelIndex: 0,

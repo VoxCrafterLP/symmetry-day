@@ -37,7 +37,7 @@ export default {
 
 body {
   color: black;
-  /* background-color: #1a1a22; */
+  background-color: #1a1a22;
   margin: 0;
   padding: 0;
 }
