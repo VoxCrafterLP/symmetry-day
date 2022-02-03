@@ -66,7 +66,6 @@ export default {
     margin-left: 5rem;
     top: 0;
     background-color: var(--bg-secondary);
-    height: 100vh;
     padding: 1rem;
 }
 
@@ -164,6 +163,12 @@ export default {
     .chess-game {
         margin-bottom: 5rem;
         margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 1430px) {
+    .chess-game-container {
+        width: 80%;
     }
 }
 
