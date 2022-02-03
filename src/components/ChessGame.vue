@@ -12,7 +12,8 @@
 
     <div class="chess-game-container">
         <h1 class="chess-game-boards-title">Level {{getCurrentLevelNumber()}}</h1>
-        <p class="chess-game-boards-difficulty">Difficulty: {{getCurrentLevel().difficulty}}</p>
+        <p class="chess-game-boards-info">Difficulty: {{getCurrentLevel().difficulty}}</p>
+        <p class="chess-game-boards-info">Required moves: {{this.requiredMoves}}</p>
 
         <div v-if="showBoards" class="chess-game-boards">
             <chessboard :fen="getCurrentLevel().startFen" @onMove="checkChessState" class="chess-game-board"/>
@@ -42,6 +43,7 @@ export default {
         loadLevel(level) {
             this.currentLevelIndex = level
             this.currentLevel = this.levels[level]
+            this.requiredMoves = this.currentLevel.moves
         },
         getCurrentLevel() {
             return (this.currentLevel == null) ? this.levels[0] : this.currentLevel
@@ -50,10 +52,10 @@ export default {
             return this.currentLevelIndex + 1
         },
         resetLevel() {
+            this.loadLevel(this.currentLevelIndex)
             this.showBoards = false
 
             this.$nextTick(() => {
-                //Add the component back in
                 this.showBoards = true
             })
         },
@@ -66,19 +68,22 @@ export default {
         },
         checkChessState(data) {
             this.nextLevelButtonEnabled = (data.fen == this.currentLevel.endFen)
+            if(this.requiredMoves != 0)
+                this.requiredMoves--
         }
     },
     data() {
         return {
             levels: [
-                new ChessLevel("1k2rp1r/1b1n1pp1/ppq1p2p/2p5/8/1NBB1N1Q/PPP2PPP/4K2R b - - 0 1", "1k3b2/1b3ppQ/p1q4p/p1p1B3/8/8/PPP2PPP/4r1K1 w - - 0 1", "2b3k1/Qpp3b1/5q1p/3B1p1p/8/8/PPP2PPP/1K1r4 w - - 0 1", "Easy", 13),
-                new ChessLevel("1k1r4/1p4q1/p6r/2ppN3/P3bP2/1P2P2P/KQP5/3R4 b - - 0 1", "1k6/1p1r4/p6r/2pR4/P3bP2/1P2P2P/1KP5/8 b - - 0 1", "6k1/4r1p1/r6p/4Rp2/2Pb3P/P2P2P1/5PK1/8 b - - 0 1", "Medium", 5),
+                new ChessLevel("1k2rp1r/1b1n1pp1/ppq1p2p/2p5/8/1NBB1N1Q/PPP2PPP/4K2R b - - 0 1", "1k3b2/1b3ppQ/p1q4p/p1p1B3/8/8/PPP2PPP/4r1K1 w - - 0 1", "2b3k1/Qpp3b1/5q1p/3B1p1p/8/8/PPP2PPP/1K1r4 w - - 0 1", "Easy", 15),
+                new ChessLevel("1k1r4/1p4q1/p6r/2ppN3/P3bP2/1P2P2P/KQP5/3R4 b - - 0 1", "1k6/1p1r4/p6r/2pR4/P3bP2/1P2P2P/1KP5/8 b - - 0 1", "6k1/4r1p1/r6p/4Rp2/2Pb3P/P2P2P1/5PK1/8 b - - 0 1", "Medium", 6),
                 new ChessLevel("8/4K2p/8/2PPpP2/Pp1p2P1/2p5/p5P1/1k6 b - - 0 1", "7q/3K4/8/3PpP2/Pp1P2P1/8/pk6/8 w - - 0 1", "q7/4K3/8/2PpP3/1P2P1pP/8/6kp/8 w - - 0 1", "Hard", 69)
             ],
             showBoards: true,
             currentLevelIndex: 0,
             currentLevel: null,
-            nextLevelButtonEnabled: false
+            nextLevelButtonEnabled: false,
+            requiredMoves: -1
         }
     },
     mounted() {
@@ -148,14 +153,17 @@ export default {
     text-align: center;
 }
 
-.chess-game-boards-difficulty {
+.chess-game-boards-info {
     color: var(--text-secondary);
     text-align: center;
+    margin: 0;
+    margin-top: 0.5rem;
 }
 
 .chess-game-boards {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .chess-game-board {
