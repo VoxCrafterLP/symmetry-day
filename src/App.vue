@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-      <navbar @switchPage="switchPage"></navbar>
       <chess-game v-show="this.currentPage == 'ChessGame'"></chess-game>
       <landing-page v-show="this.currentPage == 'Overview'"></landing-page>
+      <navbar @switchPage="switchPage"></navbar>
   </div>
 </template>
 

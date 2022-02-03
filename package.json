@@ -14,7 +14,6 @@
     "@fortawesome/vue-fontawesome": "^2.0.6",
     "core-js": "^3.6.5",
     "three": "^0.137.5",
-    "three-gltf-loader": "^1.111.0",
     "vue": "^2.6.11",
     "vue-chessboard": "^0.6.7"
   },

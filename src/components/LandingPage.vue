@@ -7,9 +7,9 @@
 <script>
 
 import * as THREE from 'three'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
-let scene, camera, renderer, torus
+let scene, camera, renderer, controls
 
 export default {
 name: "LandingPage",
@@ -21,9 +21,7 @@ name: "LandingPage",
         animate() {
             requestAnimationFrame(this.animate)
 
-            torus.rotation.x += 0.01
-            torus.rotation.y += 0.01
-            torus.rotation.z += 0.09
+            controls.update()
 
             renderer.render(scene, camera)
         }
@@ -32,31 +30,134 @@ name: "LandingPage",
         scene = new THREE.Scene()
         camera = new THREE.PerspectiveCamera(90, (window.innerWidth - this.convertRemToPixels(5)) / window.innerHeight, 0.1, 1000)
         renderer = new THREE.WebGLRenderer({
-            canvas: document.querySelector('#bg'),
-            alpha: true
+            canvas: document.querySelector('#bg')
         }) 
 
         renderer.setPixelRatio(window.devicePixelRatio)
 
         renderer.setSize((window.innerWidth - this.convertRemToPixels(5)), window.innerHeight)
-        camera.position.setZ(30)
+        camera.position.setZ(5)
 
-        //Shit
-        const torusgeometry = new THREE.TorusGeometry(10, 3, 16, 100)
-        const chessboardMaterial = new THREE.MeshStandardMaterial({color: 0xFF6347})
-        torus = new THREE.Mesh(torusgeometry, chessboardMaterial)
-        torus.position.set(500, 500, 5000)
-        scene.add(torus)
+        //debug
+        scene.add(new THREE.GridHelper(200, 50))
+        controls = new OrbitControls(camera, renderer.domElement)
+        //debug end
 
-        //Light
+        //Ambient light
         const ambientLight = new THREE.AmbientLight(0xffffff)
         scene.add(ambientLight)
 
-        //Chessboard
-        //TODO Vue not loading necessary files
-        const gltfloader = new GLTFLoader()
-        gltfloader.load('./src/assets/3d/chessboard/scene.gltf', function(gltf) {
-            scene.add(gltf.scene)
+        //Symmetry 1
+        //===============================================================================//
+        
+        scene.add(new THREE.Mesh(
+            new THREE.PlaneGeometry(4, 4),
+            new THREE.MeshBasicMaterial({color: 0x50036f, side: THREE.DoubleSide}) 
+        ))
+
+        const sym1sphere1 = new THREE.Mesh(
+            new THREE.SphereGeometry(1, 10, 10),
+            new THREE.MeshBasicMaterial({color: 0x005b76, side: THREE.DoubleSide}) 
+        )
+        sym1sphere1.position.set(0, 0, -3)
+
+        const sym1sphere2 = new THREE.Mesh(
+            new THREE.SphereGeometry(1, 10, 10),
+            new THREE.MeshBasicMaterial({color: 0x005b76, side: THREE.DoubleSide}) 
+        )
+        sym1sphere2.position.set(0, 0, 3)
+
+        scene.add(sym1sphere1, sym1sphere2)
+        //===============================================================================//
+
+
+
+        //Symmetry 2
+        //===============================================================================//
+
+        const sym2box1 = new THREE.Mesh(
+            new THREE.BoxGeometry(10, 0.1, 0.1),
+            new THREE.MeshBasicMaterial({color: 0x50036f, side: THREE.DoubleSide}) 
+        )
+        sym2box1.position.set(5, -10, 5)
+        sym2box1.rotation.set(0, 1.570796, 0)
+
+        const sym2box2 = new THREE.Mesh(
+            new THREE.BoxGeometry(2, 2, 2),
+            new THREE.MeshBasicMaterial({color: 0x005b76, side: THREE.DoubleSide}) 
+        )
+        sym2box2.position.set(9, -10, 4.8)
+
+        const sym2box3 = new THREE.Mesh(
+            new THREE.BoxGeometry(2, 2, 2),
+            new THREE.MeshBasicMaterial({color: 0x005b76, side: THREE.DoubleSide}) 
+        )
+        sym2box3.position.set(1, -10, 4.8)
+
+        scene.add(sym2box1, sym2box2,sym2box3)
+        //===============================================================================//
+
+
+
+        //Symmetry 3
+        //===============================================================================//
+
+        const sym3cyl1 = new THREE.Mesh(
+            new THREE.CylinderGeometry(2, 2, 5, 32),
+            new THREE.MeshBasicMaterial({color: 0x005b76, side: THREE.DoubleSide}) 
+        )
+        sym3cyl1.position.set(-15, -10, -5)
+
+        const sym3box1 = new THREE.Mesh(
+            new THREE.BoxGeometry(10, 0.4, 0.4),
+            new THREE.MeshBasicMaterial({color: 0x50036f, side: THREE.DoubleSide}) 
+        )
+        sym3box1.position.set(-15, -10, -5)
+        sym3box1.rotation.set(0, 0, 1.570796)
+
+
+        scene.add(sym3cyl1, sym3box1)
+        //===============================================================================//
+
+
+
+        //Symmetry 4
+        //===============================================================================//
+
+        const sym4octa1 = new THREE.Mesh(
+            new THREE.OctahedronGeometry(2, 0),
+            new THREE.MeshBasicMaterial({color: 0x005b76, side: THREE.DoubleSide}) 
+        )
+        sym4octa1.position.set(-5, 0, -20)
+
+        const sym4box1 = new THREE.Mesh(
+            new THREE.BoxGeometry(10, 0.1, 0.1),
+            new THREE.MeshBasicMaterial({color: 0x50036f, side: THREE.DoubleSide}) 
+        )
+        sym4box1.position.set(-5, 0, -20)
+        sym4box1.rotation.set(0, 0, 1.570796)
+
+        const sym4box2 = new THREE.Mesh(
+            new THREE.BoxGeometry(10, 0.1, 0.1),
+            new THREE.MeshBasicMaterial({color: 0x50036f, side: THREE.DoubleSide}) 
+        )
+        sym4box2.position.set(-5, 0, -20)
+        sym4box2.rotation.set(1.570796, 0, 0)
+
+        const sym4box3 = new THREE.Mesh(
+            new THREE.BoxGeometry(10, 0.1, 0.1),
+            new THREE.MeshBasicMaterial({color: 0x50036f, side: THREE.DoubleSide}) 
+        )
+        sym4box3.position.set(-5, 0, -20)
+        sym4box3.rotation.set(0, 1.570796, 0)
+
+        scene.add(sym4octa1, sym4box1, sym4box2, sym4box3)
+        //===============================================================================//
+
+
+        window.addEventListener('resize', () => {
+            renderer.setSize((window.innerWidth - this.convertRemToPixels(5)), window.innerHeight)
+            renderer.setPixelRatio(window.devicePixelRatio)
         })
 
         this.animate()
@@ -71,6 +172,9 @@ name: "LandingPage",
     position: fixed;
     top: 0;
     left: 5rem;
+    margin: 0;
+    height: 100vh;
+    display: block;
 }
 
 /* Mobile */
