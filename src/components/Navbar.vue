@@ -5,25 +5,31 @@
                 <li class="nav-item">
                     <a @click="switchPage('Overview')" class="nav-link">
                         <font-awesome-icon icon="home" class="nav-link-icon"></font-awesome-icon>
-                        <span class="nav-link-text">Overview</span>
+                        <span class="nav-link-text">{{ $t("nav.overview") }}</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a @click="switchPage('ChessGame')" class="nav-link">
                         <font-awesome-icon icon="chess" class="nav-link-icon"></font-awesome-icon>
-                        <span class="nav-link-text">Chess game</span>
+                        <span class="nav-link-text">{{ $t("nav.chessgame") }}</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a @click="switchPage('Info')" class="nav-link">
                         <font-awesome-icon icon="info" class="nav-link-icon"></font-awesome-icon>
-                        <span class="nav-link-text">Information</span>
+                        <span class="nav-link-text">{{ $t("nav.info") }}</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <font-awesome-icon icon="language" class="nav-link-icon"></font-awesome-icon>
+                        <span class="nav-link-text"><locale-changer/></span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="https://github.com/VoxCrafterLP/symmetry-day/" class="nav-link">
                         <font-awesome-icon :icon="['fab', 'github']" class="nav-link-icon"></font-awesome-icon>
-                        <span class="nav-link-text">Source code</span>
+                        <span class="nav-link-text">{{ $t("nav.source") }}</span>
                     </a>
                 </li>
             </ul>
@@ -32,9 +38,13 @@
 </template>
 
 <script>
+import LocaleChanger from './LocaleChanger.vue'
 
 export default {
     name: "Navbar",
+    components: {
+        LocaleChanger
+    },
     props: [],
     methods: {
         switchPage(page) {

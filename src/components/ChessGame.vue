@@ -1,19 +1,19 @@
 <template>
 
 <div class="chess-game">
-    <h1 class="chess-game-title">Chess game</h1>
+    <h1 class="chess-game-title">{{ $t("chessgame.title") }}</h1>
 
     <div class="chess-game-explanation">
-        <h2 class="chess-game-explanation-title">How does it work?</h2>
+        <h2 class="chess-game-explanation-title">{{ $t("chessgame.extitle") }}</h2>
         <p class="chess-game-explanation-paragraph">
-            You have two chessboards, one on the right and one on the left. On the right side there are pieces that cannot be moved, but those on the left side can be moved. The goal is to move the pieces on the left side so that at the end they are symmetrical to the ones on the right side. You have to iterate between the two colors like in a normal chess game.    
+            {{ $t("chessgame.extext") }}    
         </p>
     </div>
 
     <div class="chess-game-container">
-        <h1 class="chess-game-boards-title">Level {{getCurrentLevelNumber()}}</h1>
-        <p class="chess-game-boards-info">Difficulty: {{getCurrentLevel().difficulty}}</p>
-        <p class="chess-game-boards-info">Required moves: {{this.requiredMoves}}</p>
+        <h1 class="chess-game-boards-title">{{ $t("chessgame.level") }} {{getCurrentLevelNumber()}}</h1>
+        <p class="chess-game-boards-info">{{ $t("chessgame.difficulty") }} {{getCurrentLevel().difficulty}}</p>
+        <p class="chess-game-boards-info">{{ $t("chessgame.moves") }} {{this.requiredMoves}}</p>
 
         <div v-if="showBoards" class="chess-game-boards">
             <chessboard :fen="getCurrentLevel().startFen" @onMove="checkChessState" class="chess-game-board"/>
@@ -21,8 +21,8 @@
             <chessboard :fen="getCurrentLevel().referenceFen" class="chess-game-board"/>
         </div>
 
-        <button @click="resetLevel()" class="chess-game-reset chess-game-button">Reset</button>
-        <button @click="nextLevel()" class="chess-game-continue chess-game-button" :disabled="!nextLevelButtonEnabled">Next level</button>
+        <button @click="resetLevel()" class="chess-game-reset chess-game-button">{{ $t("chessgame.reset") }}</button>
+        <button @click="nextLevel()" class="chess-game-continue chess-game-button" :disabled="!nextLevelButtonEnabled">{{ $t("chessgame.nextlevel") }}</button>
     </div>
 
 </div>

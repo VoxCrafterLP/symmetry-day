@@ -1,32 +1,32 @@
 <template>
     <div class="info-page">
-        <h1 class="info-page-title">Explanations</h1>
+        <h1 class="info-page-title">{{ $t("info.title") }}</h1>
 
         <div class="info-cards-container">
             <div class="info-card">
-                <h2 class="info-card-title">Card title</h2>
+                <h2 class="info-card-title">{{ $t("info.card1.title") }}</h2>
                 <p class="info-card-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non.
+                    {{ $t("info.card1.text") }}
                 </p>
             </div>
             <div class="info-card">
-                <h2 class="info-card-title">Card title</h2>
+                <h2 class="info-card-title">{{ $t("info.card2.title") }}</h2>
                 <p class="info-card-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non.
+                    {{ $t("info.card2.text") }}
                 </p>
             </div>
         </div>
         <div class="info-cards-container">
-            <div class="info-card">
-                <h2 class="info-card-title">Card title</h2>
+           <div class="info-card">
+                <h2 class="info-card-title">{{ $t("info.card3.title") }}</h2>
                 <p class="info-card-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non.
+                    {{ $t("info.card3.text") }}
                 </p>
             </div>
             <div class="info-card">
-                <h2 class="info-card-title">Card title</h2>
+                <h2 class="info-card-title">{{ $t("info.card4.title") }}</h2>
                 <p class="info-card-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non.
+                    {{ $t("info.card4.text") }}
                 </p>
             </div>
         </div>
