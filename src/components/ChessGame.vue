@@ -172,6 +172,7 @@ export default {
 
 .vl {
     border-left: 6px solid var(--accent-color);
+    border-radius: 0.2rem;
     height: 320px;
     margin: 0 4rem 0 4rem;
 }
