@@ -111,6 +111,7 @@ export default {
     text-align: center;
     font-size: 3rem;
     margin: 0;
+    margin-top: 0.5rem;
 }
 
 .chess-game-explanation {

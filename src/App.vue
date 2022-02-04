@@ -2,13 +2,14 @@
   <div id="app">
       <chess-game v-show="this.currentPage == 'ChessGame'"></chess-game>
       <landing-page v-show="this.currentPage == 'Overview'"></landing-page>
+      <info-page v-show="this.currentPage == 'Info'"></info-page>
       <navbar @switchPage="switchPage"></navbar>
   </div>
 </template>
 
-
 <script>
 import ChessGame from './components/ChessGame.vue'
+import InfoPage from './components/InfoPage.vue'
 import LandingPage from './components/LandingPage.vue'
 import Navbar from './components/Navbar.vue'
 
@@ -17,7 +18,8 @@ export default {
   components: {
     Navbar,
     ChessGame,
-    LandingPage
+    LandingPage,
+    InfoPage
   },
   data() {
     return {

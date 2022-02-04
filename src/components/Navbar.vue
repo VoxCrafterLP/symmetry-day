@@ -15,6 +15,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a @click="switchPage('Info')" class="nav-link">
+                        <font-awesome-icon icon="info" class="nav-link-icon"></font-awesome-icon>
+                        <span class="nav-link-text">Information</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="https://github.com/VoxCrafterLP/symmetry-day/" class="nav-link">
                         <font-awesome-icon :icon="['fab', 'github']" class="nav-link-icon"></font-awesome-icon>
                         <span class="nav-link-text">Source code</span>
