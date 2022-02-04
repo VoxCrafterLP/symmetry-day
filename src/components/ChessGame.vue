@@ -89,7 +89,7 @@ export default {
         
     },
     created() {
-        this.loadLevel(1)
+        this.loadLevel(0)
     }
 }
 

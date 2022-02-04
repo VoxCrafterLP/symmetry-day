@@ -79,7 +79,7 @@ const messages = {
       },
       card3: {
         title: 'Rotation',
-        text: 'La symétrie de rotation est une rotation du système de coordonnées tout entier autour de l\'axe, le point M restant en place. Dans ce cas on utilise le repère "tourné" (R\') pour repérer la position du point M.'
+        text: 'Transformer une figure par rotation, c’est créer l’image de cette figure par une rotation autour du centre suivant un angle donné. Une rotation est définie par un centre, autour lequel on tourne, un angle de rotation et un sens, soit le sens horaire soit le sens anti-horaire.'
       },
       card4: {
         title: 'Symétrie axiale',
