@@ -30,19 +30,19 @@ const messages = {
     info: {
       title: 'Explanations',
       card1: {
-        title: 'Card title',
+        title: 'title',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       },
       card2: {
-        title: 'Card title',
+        title: 'title',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       },
       card3: {
-        title: 'Card title',
+        title: 'title',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       },
       card4: {
-        title: 'Card title',
+        title: 'title',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       }
     }
@@ -70,19 +70,19 @@ const messages = {
     info: {
       title: 'Explications',
       card1: {
-        title: 'titre de la carte',
+        title: 'La symétrie orthogonale par rapport au plan',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       },
       card2: {
-        title: 'titre de la carte',
+        title: 'Symétrie axiale',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       },
       card3: {
-        title: 'titre de la carte',
+        title: 'Translation',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       },
       card4: {
-        title: 'titre de la carte',
+        title: 'Symétrie axiale',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       }
     }
