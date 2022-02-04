@@ -69,6 +69,7 @@ export default {
     flex: 50%;
     margin: 0 2rem 0 2rem;
     border-radius: 0.8rem;
+    padding: 0.8rem;
 }
 
 .info-card-title {
@@ -79,7 +80,7 @@ export default {
     color: var(--text-secondary);
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
 
   .info-cards-container {
     flex-direction: column;
