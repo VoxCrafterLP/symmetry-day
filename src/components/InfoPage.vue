@@ -23,12 +23,6 @@
                     {{ $t("info.card3.text") }}
                 </p>
             </div>
-            <div class="info-card">
-                <h2 class="info-card-title">{{ $t("info.card4.title") }}</h2>
-                <p class="info-card-p">
-                    {{ $t("info.card4.text") }}
-                </p>
-            </div>
         </div>
     </div>
 </template>

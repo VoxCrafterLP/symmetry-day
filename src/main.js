@@ -71,15 +71,15 @@ const messages = {
       title: 'Explications',
       card1: {
         title: 'La symétrie orthogonale par rapport au plan',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
+        text: 'C\'est la transformation de l\'espace qui à tout point M de l\'espace associe le point M\' tel que  est le plan médiateur de [MM\']. C\'est la transformation de l\'espace qui à tout point M du plan associe le point M\' symétrique de M par rapport au projeté orthogonal H de M sur le plan.'
       },
       card2: {
         title: 'Symétrie axiale',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
+        text: 'La symétrie axiale, d\'axe la droite d, laisse tous les points de d invariants et transforme tout point M, non situé sur d, en un point image M\' tel que la droite (MM\') soit perpendiculaire à l\'axe de symétrie d et que le milieu du segment [MM\'] appartient à l\'axe de symétrie d.'
       },
       card3: {
-        title: 'Translation',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
+        title: 'Rotation',
+        text: 'La symétrie de rotation est une rotation du système de coordonnées tout entier autour de l\'axe, le point M restant en place. Dans ce cas on utilise le repère "tourné" (R\') pour repérer la position du point M.'
       },
       card4: {
         title: 'Symétrie axiale',
