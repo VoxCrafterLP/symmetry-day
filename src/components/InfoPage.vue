@@ -47,8 +47,8 @@ export default {
     color: var(--accent-color);
     text-align: center;
     font-size: 3rem;
-    margin: 0;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 0;
+    text-decoration: underline;
 }
 
 .info-cards-container {

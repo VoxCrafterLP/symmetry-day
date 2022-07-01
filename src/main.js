@@ -47,7 +47,8 @@ const messages = {
       }
     },
     general: {
-      learn_more: 'Learn more'
+      learn_more: 'Learn more',
+      landing_title: 'Some symmetry examples'
     }
   },
   fr: {
@@ -90,7 +91,8 @@ const messages = {
       }
     },
     general: {
-      learn_more: 'Savoir plus'
+      learn_more: 'Savoir plus',
+      landing_title: 'Quelques exemples de symétrie'
     }
   }
 }

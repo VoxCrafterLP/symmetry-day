@@ -1,6 +1,7 @@
 <template>
   <div>
     <a @click="$emit('switchPage', 'Info')" class="info-button">{{ $t('general.learn_more') }}</a>
+    <h1 class="info-title">{{ $t('general.landing_title') }}</h1>
     <canvas class="landing-page" id="bg"/>
   </div>
 </template>
@@ -38,7 +39,7 @@ name: "LandingPage",
         renderer.setPixelRatio(window.devicePixelRatio)
 
         renderer.setSize((window.innerWidth - this.convertRemToPixels(5)), window.innerHeight)
-        camera.position.set(20, 18, -40)
+        camera.position.set(20, 18, -60)
 
         //Controls
         controls = new OrbitControls(camera, renderer.domElement)
@@ -177,6 +178,13 @@ name: "LandingPage",
     margin: 0;
     height: 100vh;
     display: block;
+}
+
+.info-title {
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 2.2rem;
+    text-decoration: underline;
 }
 
 .info-button {
