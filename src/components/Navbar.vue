@@ -75,6 +75,7 @@ export default {
 
 .nav-item {
     width: 100%;
+    cursor: pointer;
 }
 
 .nav-item:last-child {
@@ -102,7 +103,7 @@ export default {
 
 .nav-link:hover svg {
     color: var(--accent-color);
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .nav-link-text {

@@ -45,6 +45,9 @@ const messages = {
         title: 'title',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       }
+    },
+    general: {
+      learn_more: 'Learn more'
     }
   },
   fr: {
@@ -85,6 +88,9 @@ const messages = {
         title: 'Symétrie axiale',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
       }
+    },
+    general: {
+      learn_more: 'Savoir plus'
     }
   }
 }

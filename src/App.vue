@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-      <chess-game v-show="this.currentPage == 'ChessGame'"></chess-game>
-      <landing-page v-show="this.currentPage == 'Overview'"></landing-page>
-      <info-page v-show="this.currentPage == 'Info'"></info-page>
-      <navbar @switchPage="switchPage"></navbar>
+      <chess-game v-show="this.currentPage === 'ChessGame'"/>
+      <landing-page v-show="this.currentPage === 'Overview'" @switchPage="switchPage"/>
+      <info-page v-show="this.currentPage === 'Info'"/>
+      <navbar @switchPage="switchPage"/>
   </div>
 </template>
 
@@ -55,6 +55,7 @@ body {
   --bg-accent: #32324d;
   --transition-speed: 600ms;
   --accent-color: #b33aa8;
+  --accent-color-focus: #82287a;
 }
 
 /* Customize scrollbar */

@@ -1,5 +1,8 @@
 <template>
-  <canvas class="landing-page" id="bg"></canvas>
+  <div>
+    <a @click="$emit('switchPage', 'Info')" class="info-button">{{ $t('general.learn_more') }}</a>
+    <canvas class="landing-page" id="bg"/>
+  </div>
 </template>
 
 <script>
@@ -50,23 +53,23 @@ name: "LandingPage",
 
         const sym1plane1 = new THREE.Mesh(
             new THREE.PlaneGeometry(4, 4),
-            new THREE.MeshBasicMaterial({color: 0x50036f, side: THREE.DoubleSide}) 
+            new THREE.MeshBasicMaterial({color: 0x50036f, side: THREE.DoubleSide})
         )
         sym1plane1.position.set(0, 10, 0)
 
-        const sym1sphere1 = new THREE.Mesh(
-            new THREE.SphereGeometry(1, 10, 10),
-            new THREE.MeshBasicMaterial({color: 0x005b76, side: THREE.DoubleSide}) 
+        const sym1cone1 = new THREE.Mesh(
+            new THREE.ConeGeometry(1, 4, 10),
+            new THREE.MeshToonMaterial({color: 0x005b76, side: THREE.FrontSide})
         )
-        sym1sphere1.position.set(0, 10, -3)
+        sym1cone1.position.set(0, 10, -3)
 
-        const sym1sphere2 = new THREE.Mesh(
-            new THREE.SphereGeometry(1, 10, 10),
-            new THREE.MeshBasicMaterial({color: 0x005b76, side: THREE.DoubleSide}) 
+        const sym1cone2 = new THREE.Mesh(
+            new THREE.ConeGeometry(1, 4, 10),
+            new THREE.MeshBasicMaterial({color: 0x005b76, side: THREE.FrontSide})
         )
-        sym1sphere2.position.set(0, 10, 3)
+        sym1cone2.position.set(0, 10, 3)
 
-        scene.add(sym1plane1, sym1sphere1, sym1sphere2)
+        scene.add(sym1plane1, sym1cone1, sym1cone2)
         //===============================================================================//
 
 
@@ -174,6 +177,31 @@ name: "LandingPage",
     margin: 0;
     height: 100vh;
     display: block;
+}
+
+.info-button {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    z-index: 10;
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--accent-color);
+    padding: 0.25rem 1rem;
+    border: var(--accent-color) 0.15rem solid;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    transition: var(--transition-speed);
+    background: none;
+}
+
+.info-button:hover {
+    transform: scale(1.03);
+    color: var(--accent-color-focus);
 }
 
 /* Mobile */
