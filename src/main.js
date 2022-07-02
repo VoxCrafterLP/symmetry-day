@@ -25,21 +25,23 @@ const messages = {
       nextlevel: 'Next level',
       easy: 'Easy',
       normal: 'Normal',
-      hard: 'Hard'
+      hard: 'Hard',
+      won: 'Level completed!',
+      finished: 'You have won!'
     },
     info: {
       title: 'Explanations',
       card1: {
-        title: 'title',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
+        title: 'Orthogonal symmetry with respect to the plane',
+        text: ' It is the transformation of space which associates to any point M in space the point M\' such that is the median plane of [MM\']. It is the transformation of space which associates to any point M of the plane the point M\' symmetrical to M with respect to the orthogonal project H of M on the plane.'
       },
       card2: {
-        title: 'title',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
+        title: 'Axial symmetry',
+        text: 'Axial symmetry, with axis d, leaves all points of d invariant and transforms any point M, not located on d, into an image point M\' such that the line (MM\') is perpendicular to the axis of symmetry d and that the middle of the segment [MM\'] belongs to the axis of symmetry d '
       },
       card3: {
-        title: 'title',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere soluta repellat? Eligendi molestias beatae facilis nam id! Voluptatibus maiores quas aut perspiciatis aperiam sapiente obcaecati, recusandae mollitia delectus non. '
+        title: 'Rotation',
+        text: 'To transform a figure by rotation is to create the image of that figure by a rotation about the center at a given angle. A rotation is defined by a center, around which we rotate, an angle of rotation and a direction, either clockwise or counterclockwise.'
       },
       card4: {
         title: 'title',
@@ -69,7 +71,9 @@ const messages = {
       nextlevel: 'Level suivant',
       easy: 'Facile',
       normal: 'Normale',
-      hard: 'Difficile'
+      hard: 'Difficile',
+      won: 'Level terminé!',
+      finished: 'Gagné!'
     },
     info: {
       title: 'Explications',

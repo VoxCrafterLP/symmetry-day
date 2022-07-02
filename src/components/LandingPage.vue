@@ -183,6 +183,7 @@ name: "LandingPage",
 .info-title {
     color: var(--accent-color);
     text-align: center;
+    left: 5rem;
     font-size: 2.2rem;
     text-decoration: underline;
 }
