@@ -81,6 +81,9 @@ export default {
 
             if(this.requiredMoves != 0)
                 this.requiredMoves--
+
+            //console.log('1: ' + data.fen)
+            //console.log('2: ' + this.currentLevel.endFen)
         }
     },
     data() {
@@ -88,7 +91,8 @@ export default {
             levels: [
                 new ChessLevel("b1k1qbr1/3p3P/6p1/p3N1Q1/1p5R/2P1PN2/PP1P1PP1/BRK2B2 w - - 0 1", "2k2bQ1/3p4/6p1/p3N1Q1/1p2R3/2P1P3/PP1P1PP1/BRK2B2 b - - 0 3", "1Qb2k2/4p3/1p6/1Q1N3p/3R2p1/3P1P2/1PP1P1PP/2B2KRB w - - 0 1", "chessgame.easy", 6),
                 new ChessLevel("1k1r4/1p4q1/p6r/2ppN3/P3bP2/1P2P2P/KQP5/3R4 w - - 0 1", "1k6/1p1r4/p6r/2pR4/P3bP2/1P2P2P/1KP5", "6k1/4r1p1/r6p/4Rp2/2Pb3P/P2P2P1/5PK1/8 b - - 0 1", "chessgame.normal", 6),
-                new ChessLevel("1k3b1r/1b1n1pp1/p1q1p3/p1p5/8/2BB1N1Q/PPP2PPP/4K2R w - - 0 1", "k4b2/1b3ppQ/p1q5/p1p1B3/8/8/PPP2PPP/4K2R", "2b4k/Qpp3b1/5q1p/3B1p1p/8/8/PPP2PPP/R2K4 w - - 0 1", "chessgame.hard", 10),
+                new ChessLevel("2b3n1/2kpb1p1/p6p/1p2P2Q/1n3P2/3P4/P1P4P/1NB1K2R w - - 0 1", "2b5/2k1b1p1/4p3/1p6/1n3P2/3Pn3/P1P4P/4K2R w - - 0 6", "5b2/1p1b1k2/3p4/6p1/2P3n1/3nP3/P4P1P/R2K4 w - - 0 1", "chessgame.hard", 11),
+                //new ChessLevel("1k3b1r/1b1n1pp1/p1q1p3/p1p5/8/2BB1N1Q/PPP2PPP/4K2R w - - 0 1", "k4b2/1b3ppQ/p1q5/p1p1B3/8/8/PPP2PPP/4K2R", "2b4k/Qpp3b1/5q1p/3B1p1p/8/8/PPP2PPP/R2K4 w - - 0 1", "chessgame.hard", 10),
             ],
             showBoards: true,
             currentLevelIndex: 0,

@@ -79,15 +79,15 @@ const messages = {
       title: 'Explications',
       card1: {
         title: 'La symétrie orthogonale par rapport au plan',
-        text: 'C\'est la transformation de l\'espace qui à tout point M de l\'espace associe le point M\' tel que  est le plan médiateur de [MM\']. C\'est la transformation de l\'espace qui à tout point M du plan associe le point M\' symétrique de M par rapport au projeté orthogonal H de M sur le plan.'
+        text: 'C\'est la transformation de l\'espace qui à tout point M de l\'espace associe le point M\' tel que  est le plan médiateur de [MM\']. C\'est la transformation de l\'espace qui à tout point M du plan associe le point M\' symétrique de M par rapport au projeté orthogonal H de M sur le plan. Peut être vu sur la figure 1.'
       },
       card2: {
         title: 'Symétrie axiale',
-        text: 'La symétrie axiale, d\'axe la droite d, laisse tous les points de d invariants et transforme tout point M, non situé sur d, en un point image M\' tel que la droite (MM\') soit perpendiculaire à l\'axe de symétrie d et que le milieu du segment [MM\'] appartient à l\'axe de symétrie d.'
+        text: 'La symétrie axiale, d\'axe la droite d, laisse tous les points de d invariants et transforme tout point M, non situé sur d, en un point image M\' tel que la droite (MM\') soit perpendiculaire à l\'axe de symétrie d et que le milieu du segment [MM\'] appartient à l\'axe de symétrie d. Peut être vu sur les figures 2 et 4.'
       },
       card3: {
         title: 'Rotation',
-        text: 'Transformer une figure par rotation, c’est créer l’image de cette figure par une rotation autour du centre suivant un angle donné. Une rotation est définie par un centre, autour lequel on tourne, un angle de rotation et un sens, soit le sens horaire soit le sens anti-horaire.'
+        text: 'Transformer une figure par rotation, c’est créer l’image de cette figure par une rotation autour du centre suivant un angle donné. Une rotation est définie par un centre, autour lequel on tourne, un angle de rotation et un sens, soit le sens horaire soit le sens anti-horaire. Peut être vu sur la figure 3.'
       },
       card4: {
         title: 'Symétrie axiale',
